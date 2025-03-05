@@ -11,10 +11,24 @@ import { QuizDataService } from '../../services/quiz-data.service';
 })
 export class QuizScreenComponent {
   quizData: any[] = [];
+  currentQuestionIndex: number = 0;
 
   constructor(private quizDataService: QuizDataService) {}
 
   ngOnInit(): void {
     this.quizData = this.quizDataService.getQuizData();
   }
+
+  nextQuestion(): void {
+    if (this.currentQuestionIndex < this.quizData.length - 1) {
+      this.currentQuestionIndex++;
+    }
+  }
+
+  previousQuestion(): void {
+    if (this.currentQuestionIndex > 0) {
+      this.currentQuestionIndex--;
+    }
+  }
+
 }
