@@ -9,16 +9,16 @@
       {{ quizData[currentQuestionIndex].Question }}
     </h3>
     <ul class="space-y-2 text-lg text-gray-600">
-      <li class="p-2 rounded-md hover:bg-blue-100">
+      <li class="p-2 rounded-md hover:bg-blue-100" (click)="selectAnswer(1)">
         {{ quizData[currentQuestionIndex].OptionA }}
       </li>
-      <li class="p-2 rounded-md hover:bg-blue-100">
+      <li class="p-2 rounded-md hover:bg-blue-100" (click)="selectAnswer(2)">
         {{ quizData[currentQuestionIndex].OptionB }}
       </li>
-      <li class="p-2 rounded-md hover:bg-blue-100">
+      <li class="p-2 rounded-md hover:bg-blue-100" (click)="selectAnswer(3)">
         {{ quizData[currentQuestionIndex].OptionC }}
       </li>
-      <li class="p-2 rounded-md hover:bg-blue-100">
+      <li class="p-2 rounded-md hover:bg-blue-100" (click)="selectAnswer(4)">
         {{ quizData[currentQuestionIndex].OptionD }}
       </li>
     </ul>

@@ -12,6 +12,7 @@ import { QuizDataService } from '../../services/quiz-data.service';
 export class QuizScreenComponent {
   quizData: any[] = [];
   currentQuestionIndex: number = 0;
+  selectedAnswer: number = 0;
 
   constructor(private quizDataService: QuizDataService) {}
 
@@ -31,4 +32,8 @@ export class QuizScreenComponent {
     }
   }
 
+  selectAnswer(option: number) {
+    this.selectedAnswer = option;
+    console.log('Selected Answer:', option);
+  }
 }
