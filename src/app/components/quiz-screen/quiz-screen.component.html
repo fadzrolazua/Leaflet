@@ -1,0 +1,17 @@
+<div *ngIf="quizData.length > 0">
+    <h2>Quiz</h2>
+    <div *ngFor="let question of quizData">
+      <h3>{{ question.Question }}</h3>
+      <ul>
+        <li>{{ question.OptionA }}</li>
+        <li>{{ question.OptionB }}</li>
+        <li>{{ question.OptionC }}</li>
+        <li>{{ question.OptionD }}</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div *ngIf="quizData.length === 0">
+    <p>No quiz data available. Please upload a file first.</p>
+  </div>
+  
